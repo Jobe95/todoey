@@ -37,10 +37,7 @@ class CategoryViewController: UITableViewController {
     //MARK: - Table view Delegate Methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Vad som händer när man trycker på en cell i tableView
-        
         performSegue(withIdentifier: "goToItems", sender: self)
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,12 +73,9 @@ class CategoryViewController: UITableViewController {
         tableView.reloadData()
     }
 
-    
     //MARK: - Add new Category
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
-        
-        
         
         let alert = UIAlertController.init(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
         
